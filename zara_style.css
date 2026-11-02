@@ -1,0 +1,905 @@
+/* ══════════════════════════════════════════════
+   LexLearn Academy — Engineering Track
+   Week 7: Flexbox — Practice
+   Character: Zara Bello, UI/UX Designer, Lagos
+   ══════════════════════════════════════════════
+
+   HOW TO USE THIS FILE
+   ─────────────────────
+   Each task is a CSS comment describing exactly
+   what property to write and where.
+   Write your CSS rule directly below the comment.
+   Do not edit zara_bello_style_this.html.
+
+   STRUCTURE REMINDER
+   ──────────────────
+   A flex layout always has two roles:
+     1. The CONTAINER — the parent. You add display: flex here.
+     2. The ITEMS    — the direct children. They are arranged by the container.
+*/
+
+/* ══════════════════════════════════════════════
+   TASK 0 — Connect the stylesheet
+   ══════════════════════════════════════════════
+   Open the HTML file and add your <link> tag inside <head>.
+   Come back to this file only after you have done that.
+*/
+
+/* ══════════════════════════════════════════════
+   TASK 1 — CSS Reset
+   ══════════════════════════════════════════════
+   Use the * selector. Set box-sizing to border-box,
+   margin to 0, and padding to 0.
+   This must be the very first CSS rule you write.
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 2 — Base body styles
+   ══════════════════════════════════════════════
+   Style the body element:
+     font-family: "Segoe UI", sans-serif
+     color: #1A1A1A
+     background-color: #F7F7F7
+*/
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: #1a1a1a;
+    background-color: #f7f7f7;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 3 — Wrapper
+   ══════════════════════════════════════════════
+   Style .wrapper:
+     max-width: 1060px
+     margin: 0 auto
+     padding: 0 32px
+*/
+.wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* ══════════════════════════════════════════════
+   ── NAV BAR ──────────────────────────────────
+   The nav bar is your first flex container.
+   The logo sits on the left, the links sit on the right.
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 4 — Make #main-nav a flex container
+   ══════════════════════════════════════════════
+   Style #main-nav:
+     display: flex
+     justify-content: space-between   ← pushes logo left, links right
+     align-items: center              ← vertical centre both sides
+     background-color: #0A1628
+     padding: 0 40px
+     height: 64px
+
+   This is the CONTAINER. The flex items are .nav-logo and .nav-links.
+*/
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a1628;
+    padding: 0 40px;
+    height: 64px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 5 — Style the nav logo (flex item)
+   ══════════════════════════════════════════════
+   Style .nav-logo:
+     color: #FFFFFF
+     font-size: 20px
+     font-weight: bold
+     letter-spacing: 1px
+
+   .nav-logo is a flex ITEM — the nav controls its position.
+*/
+.nav-logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 6 — Style .nav-links (the ul, also a flex item)
+   ══════════════════════════════════════════════
+   Style .nav-links:
+     display: flex           ← .nav-links is BOTH a flex item AND a flex container
+     list-style-type: none
+     gap: 32px
+
+   Notice: .nav-links is a flex item of #main-nav,
+   AND a flex container for its own <li> children.
+   This is called a nested flex container.
+*/
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 32px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 7 — Style nav link anchors
+   ══════════════════════════════════════════════
+   Target: .nav-links a
+     color: #AABBCC
+     text-decoration: none
+     font-size: 15px
+     font-weight: bold
+*/
+.nav-links a {
+    color: #aabbcc;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* ══════════════════════════════════════════════
+   ── HERO SECTION ─────────────────────────────
+   The hero uses a flex COLUMN to stack its
+   content and centre it on both axes.
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 8 — Make #hero a flex column container
+   ══════════════════════════════════════════════
+   Style #hero:
+     display: flex
+     flex-direction: column        ← stack items top to bottom
+     align-items: center           ← centre each child horizontally
+     justify-content: center       ← centre the whole group vertically
+     text-align: center
+     background-color: #0A1628
+     color: #FFFFFF
+     padding: 100px 24px
+     min-height: 480px
+
+   Observe: when flex-direction is column,
+   justify-content controls the VERTICAL axis
+   and align-items controls the HORIZONTAL axis.
+   This is the opposite of the row direction.
+*/
+#hero {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #0a1628;
+    color: #fff;
+    padding: 100px 24px;
+    min-height: 480px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 9 — Style hero label
+   ══════════════════════════════════════════════
+   Style .hero-label:
+     color: #00C2FF
+     font-size: 14px
+     letter-spacing: 3px
+     text-transform: uppercase
+     margin-bottom: 16px
+*/
+.hero-label {
+    color: #00c2ff;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 10 — Style the hero h1
+   ══════════════════════════════════════════════
+   Style #hero h1:
+     font-size: 48px
+     line-height: 1.2
+     margin-bottom: 20px
+*/
+
+#hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 11 — Style hero sub-text
+   ══════════════════════════════════════════════
+   Style .hero-sub:
+     font-size: 18px
+     color: #AABBCC
+     max-width: 560px
+     line-height: 1.6
+     margin-bottom: 36px
+*/
+.hero-sub {
+    font-size: 18px;
+    color: #aabbcc;
+    max-width: 560px;
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 12 — Make .hero-buttons a flex row
+   ══════════════════════════════════════════════
+   Style .hero-buttons:
+     display: flex
+     gap: 16px
+
+   These two buttons are flex items. Because
+   .hero is also flex + align-items: center,
+   this button row is itself centred in the hero.
+*/
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 13 — Style the two hero buttons
+   ══════════════════════════════════════════════
+   Style .btn-primary:
+     background-color: #00C2FF
+     color: #0A1628
+     padding: 14px 28px
+     text-decoration: none
+     font-weight: bold
+     font-size: 15px
+
+   Style .btn-secondary:
+     background-color: transparent
+     color: #FFFFFF
+     padding: 14px 28px
+     text-decoration: none
+     font-weight: bold
+     font-size: 15px
+     border: 2px solid #FFFFFF
+*/
+
+.btn-primary {
+    background-color: #00c2ff;
+    color: #0a1628;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid #ffffff;
+}
+
+/* ══════════════════════════════════════════════
+   ── SHARED SECTION STYLES ────────────────────
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 14 — Style all section elements
+   ══════════════════════════════════════════════
+   Style section:
+     padding-top: 72px
+     padding-bottom: 72px
+     border-bottom: 1px solid #E0E0E0
+*/
+section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    border-bottom: 1px solid #e0e0e0;
+}
+/* ══════════════════════════════════════════════
+   TASK 15 — Style h2 and h3
+   ══════════════════════════════════════════════
+   Style h2:
+     font-size: 32px
+     color: #0A1628
+     margin-bottom: 32px
+
+   Style h3:
+     font-size: 18px
+     color: #112240
+     margin-bottom: 12px
+
+   Style p:
+     line-height: 1.7
+     margin-bottom: 14px
+*/
+
+h2 {
+    font-size: 32px;
+    color: #0a1628;
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #112240;
+    margin-bottom: 12px;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+/* ══════════════════════════════════════════════
+   ── ABOUT SECTION: TWO COLUMNS ───────────────
+   This is where flex-grow lets two columns
+   share space in a controlled ratio.
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 16 — Make .about-layout a flex container
+   ══════════════════════════════════════════════
+   Style .about-layout:
+     display: flex
+     gap: 48px
+     align-items: flex-start    ← items start at the top, not stretched to same height
+*/
+
+.about-layout {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 17 — Set flex-grow on the two columns
+   ══════════════════════════════════════════════
+   Style .about-bio:
+     flex: 2        ← shorthand for flex: 2 1 0  (grows twice as much as the skills column)
+
+   Style .about-skills:
+     flex: 1        ← shorthand for flex: 1 1 0  (grows once)
+
+   SHORTHAND REMINDER:
+     flex: 1     expands to   flex-grow: 1  flex-shrink: 1  flex-basis: 0
+     flex: 2     expands to   flex-grow: 2  flex-shrink: 1  flex-basis: 0
+
+   Because both start at 0 width, all available space is distributed
+   in a 2:1 ratio — bio gets two thirds, skills gets one third.
+*/
+
+.about-bio {
+    flex: 3;
+}
+
+.about-skills {
+    flex: 0 0 300px;
+    order: -1;
+}
+/* ══════════════════════════════════════════════
+   TASK 18 — Style the skills list
+   ══════════════════════════════════════════════
+   Style .skills-list:
+     list-style-type: none
+     padding-left: 0
+
+   Style .skills-list li:
+     padding: 8px 14px
+     margin-bottom: 8px
+     background-color: #EEF6FF
+     color: #0A1628
+     font-size: 14px
+     font-weight: bold
+*/
+
+.skills-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    padding: 8px 14px;
+    margin-bottom: 8px;
+    background-color: #eef6ff;
+    color: #0a1628;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ══════════════════════════════════════════════
+   ── WORK SECTION: CARD ROW ───────────────────
+   Three project cards in a row that wraps
+   when the viewport gets too narrow.
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 19 — Make .card-row a flex container
+   ══════════════════════════════════════════════
+   Style .card-row:
+     display: flex
+     flex-wrap: wrap         ← cards wrap to the next line instead of overflowing
+     gap: 24px
+
+   Without flex-wrap: wrap, all three cards would stay on one line
+   and squish until they overflow. With it, they wrap gracefully.
+*/
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 20 — Size each card with flex shorthand
+   ══════════════════════════════════════════════
+   Style .project-card:
+     flex: 1 1 280px      ← grow: yes, shrink: yes, basis: 280px minimum
+     background-color: #FFFFFF
+     border: 1px solid #DDDDDD
+     padding: 28px
+*/
+
+.project-card {
+    flex: 1 1 280px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 28px;
+}
+
+/* FLEX SHORTHAND BREAKDOWN:
+      flex: 1 1 280px  means:
+        flex-grow:   1      → card CAN grow to fill extra space
+        flex-shrink: 1      → card CAN shrink if needed
+        flex-basis:  280px  → card starts at 280px before grow/shrink kicks in
+
+      Result: on a wide screen all three cards grow equally.
+      On a narrow screen they shrink, and if they go below 280px they wrap.
+   */
+
+/* ══════════════════════════════════════════════
+   TASK 21 — Style card internals
+   ══════════════════════════════════════════════
+   Style .card-tag:
+     display: inline-block
+     background-color: #0A1628
+     color: #00C2FF
+     font-size: 12px
+     font-weight: bold
+     padding: 4px 10px
+     margin-bottom: 14px
+     letter-spacing: 1px
+     text-transform: uppercase
+
+   Style .card-role:
+     font-size: 13px
+     color: #888888
+     margin-top: 16px
+*/
+
+.card-tag {
+    display: inline-block;
+    background-color: #0a1628;
+    color: #00c2ff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-role {
+    font-size: 13px;
+    color: #888888;
+    margin-top: 16px;
+}
+
+/* ══════════════════════════════════════════════
+   ── PROCESS SECTION: SIDEBAR + MAIN ──────────
+   This demonstrates flex: 0 0 220px (fixed sidebar)
+   vs flex: 1 (growing main content area).
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 22 — Make .process-layout a flex container
+   ══════════════════════════════════════════════
+   Style .process-layout:
+     display: flex
+     gap: 48px
+     align-items: flex-start
+*/
+
+.process-layout {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 23 — Fix the sidebar width with flex shorthand
+   ══════════════════════════════════════════════
+   Style .process-sidebar:
+     flex: 0 0 200px    ← grow: 0, shrink: 0, basis: 200px → FIXED at 200px
+
+   SHORTHAND BREAKDOWN:
+     flex: 0 0 200px  means:
+       flex-grow:   0      → sidebar does NOT grow
+       flex-shrink: 0      → sidebar does NOT shrink
+       flex-basis:  200px  → sidebar stays at exactly 200px
+
+   Compare to the main column below (flex: 1) — that one takes all the rest.
+*/
+
+.process-sidebar {
+    flex: 0 0 200px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 24 — Let .process-main grow to fill remaining space
+   ══════════════════════════════════════════════
+   Style .process-main:
+     flex: 1     ← shorthand for flex: 1 1 0 → takes all remaining width
+
+   Together, Tasks 23 and 24 produce the classic sidebar layout:
+     sidebar: fixed 200px | main: everything else
+*/
+.process-main {
+    flex: 1;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 25 — Style sidebar list and items
+   ══════════════════════════════════════════════
+   Style .process-sidebar h3:
+     font-size: 13px
+     text-transform: uppercase
+     letter-spacing: 2px
+     color: #888888
+     margin-bottom: 16px
+
+   Style .phase-list:
+     list-style-type: none
+     padding-left: 0
+
+   Style .phase-item:
+     padding: 10px 14px
+     margin-bottom: 4px
+     color: #555555
+     font-size: 15px
+     border-left: 3px solid #E0E0E0
+
+   Style .phase-item.active:
+     color: #0A1628
+     font-weight: bold
+     border-left: 3px solid #00C2FF
+     background-color: #EEF6FF
+
+   NOTE: .phase-item.active selects elements that have BOTH classes.
+   This is called a compound selector. In the HTML, the first <li>
+   has class="phase-item active" — so only that one gets these styles.
+*/
+
+.process-sidebar h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888888;
+    margin-bottom: 16px;
+}
+
+.phase-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.phase-item {
+    padding: 10px 14px;
+    margin-bottom: 4px;
+    color: #555555;
+    font-size: 15px;
+    border-left: 3px solid #e0e0e0;
+}
+
+.phase-item.active {
+    color: #0a1628;
+    font-weight: bold;
+    border-left: 3px solid #00c2ff;
+    background-color: #eef6ff;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 26 — Style each phase-block in .process-main
+   ══════════════════════════════════════════════
+   Style .phase-block:
+     padding-bottom: 32px
+     margin-bottom: 32px
+     border-bottom: 1px solid #EEEEEE
+
+   Style .phase-block:last-child:
+     border-bottom: none     ← removes the border from the last block only
+     margin-bottom: 0
+
+   NOTE: :last-child is a CSS pseudo-class.
+   It selects the last element inside its parent.
+   You do not need a separate class for this — CSS figures it out.
+*/
+
+.phase-block {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.phase-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* ══════════════════════════════════════════════
+   ── TESTIMONIALS: ROW + WRAP ─────────────────
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 27 — Make .testimonial-row a flex container
+   ══════════════════════════════════════════════
+   Style .testimonial-row:
+     display: flex
+     flex-wrap: wrap
+     gap: 24px
+*/
+
+.testimonial-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 28 — Size each testimonial with flex shorthand
+   ══════════════════════════════════════════════
+   Style .testimonial:
+     flex: 1 1 340px    ← same pattern as the project cards
+     background-color: #FFFFFF
+     border-left: 4px solid #00C2FF
+     padding: 28px
+
+   Style .quote:
+     font-size: 17px
+     font-style: italic
+     color: #333333
+     line-height: 1.7
+     margin-bottom: 16px
+
+   Style .attribution:
+     font-size: 14px
+     font-weight: bold
+     color: #0A1628
+*/
+
+.testimonial {
+    flex: 1 1 340px;
+    background-color: #ffffff;
+    border-left: 4px solid #00c2ff;
+    padding: 28px;
+}
+
+.quote {
+    font-size: 17px;
+    font-style: italic;
+    color: #333333;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.attribution {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0a1628;
+}
+
+/* ══════════════════════════════════════════════
+   ── CONTACT SECTION ──────────────────────────
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 29 — Make .contact-layout a flex container
+   ══════════════════════════════════════════════
+   Style .contact-layout:
+     display: flex
+     gap: 48px
+     align-items: flex-start
+
+   Style .contact-info:
+     flex: 2
+
+   Style .availability-card:
+     flex: 1
+     background-color: #0A1628
+     color: #FFFFFF
+     padding: 32px
+*/
+
+.contact-layout {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 2;
+}
+
+.availability-card {
+    flex: 1;
+    background-color: #0a1628;
+    color: #ffffff;
+    padding: 32px;
+    align-self: stretch;
+}
+
+/* ══════════════════════════════════════════════
+   TASK 30 — Style contact list and availability card internals
+   ══════════════════════════════════════════════
+   Style .contact-list:
+     list-style-type: none
+     padding-left: 0
+     margin-top: 20px
+
+   Style .contact-list li:
+     padding: 10px 0
+     border-bottom: 1px solid #EEEEEE
+     font-size: 15px
+
+   Style .avail-status:
+     color: #00C2FF
+     font-size: 13px
+     font-weight: bold
+     letter-spacing: 2px
+     text-transform: uppercase
+     margin-bottom: 12px
+
+   Style .avail-note:
+     font-size: 13px
+     color: #AABBCC
+     margin-top: 16px
+*/
+
+.contact-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.contact-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 15px;
+}
+
+.avail-status {
+    color: #00c2ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.avail-note {
+    font-size: 13px;
+    color: #aabbcc;
+    margin-top: 16px;
+}
+
+/* ══════════════════════════════════════════════
+   ── FOOTER ───────────────────────────────────
+   ═══════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════
+   TASK 31 — Style #main-footer
+   ══════════════════════════════════════════════
+   Style #main-footer:
+     background-color: #0A1628
+     color: #FFFFFF
+     padding: 48px 40px
+
+   Make .footer-inner a flex container:
+     display: flex
+     justify-content: space-between
+     align-items: center
+     flex-wrap: wrap
+     gap: 8px
+
+   Style .footer-name:
+     font-size: 18px
+     font-weight: bold
+     color: #FFFFFF
+
+   Style .footer-copy:
+     font-size: 13px
+     color: #888888
+
+   Style .footer-location:
+     font-size: 13px
+     color: #00C2FF
+*/
+
+#main-footer {
+    background-color: #0a1628;
+    color: #ffffff;
+    padding: 48px 40px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.footer-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: #888888;
+}
+
+.footer-location {
+    font-size: 13px;
+    color: #00c2ff;
+}
+
+/* ══════════════════════════════════════════════
+   OPEN CHALLENGES
+   ══════════════════════════════════════════════
+   The tasks above are complete. Push further.
+
+   Challenge A — ORDER PROPERTY
+     Add order: -1 to .about-skills so the skills
+     column appears on the LEFT even though it comes
+     second in the HTML. The order property lets you
+     re-arrange flex items visually without touching
+     the HTML. Useful for mobile-first layouts.
+
+   Challenge B — ALIGN-SELF
+     Add align-self: stretch to .availability-card.
+     Watch it grow to match the height of .contact-info.
+     align-self overrides the container's align-items
+     for that one item only.
+
+   Challenge C — FLEX-DIRECTION COLUMN ON MOBILE
+     Add a media query for max-width: 720px.
+     Inside it, set .about-layout, .process-layout,
+     and .contact-layout to flex-direction: column.
+     This makes all three multi-column layouts stack
+     on narrow screens. We have not taught media
+     queries formally — work it out from the syntax.
+
+   Challenge D — GROW EXPERIMENT
+     Change .about-bio to flex: 3 and .about-skills
+     to flex: 1. Observe how the ratio changes.
+     Then try flex: 0 0 300px on .about-skills.
+     What happens to .about-bio now? Why?
+*/

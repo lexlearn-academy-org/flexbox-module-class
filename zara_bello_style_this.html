@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zara Bello — UI/UX Designer</title>
+        <link href="./zara_style.css" rel="stylesheet" />
+        <!--
+    TASK 0: Connect your stylesheet.
+    Add a <link> tag here that points to zara_style.css.
+    Without it, none of your CSS will work.
+  -->
+    </head>
+    <body>
+        <!-- ═══════════════════════════════════════════
+       NAV BAR
+       The nav uses a flex container to push
+       the logo left and the links right.
+       ═══════════════════════════════════════════ -->
+        <nav id="main-nav">
+            <div class="nav-logo">Zara Bello</div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li><a href="#work">Work</a></li>
+                <li><a href="#process">Process</a></li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- ═══════════════════════════════════════════
+       HERO SECTION
+       A flex column that centres everything
+       both horizontally and vertically.
+       ═══════════════════════════════════════════ -->
+        <section id="hero">
+            <p class="hero-label">UI/UX Designer · Lagos, Nigeria</p>
+            <h1>Designing Interfaces<br />People Actually Use</h1>
+            <p class="hero-sub">
+                I help startups and product teams turn complex problems into
+                clear, beautiful digital experiences.
+            </p>
+            <div class="hero-buttons">
+                <a href="#work" class="btn-primary">See My Work</a>
+                <a href="#contact" class="btn-secondary">Get in Touch</a>
+            </div>
+        </section>
+
+        <main class="wrapper">
+            <!-- ═══════════════════════════════════════════
+         ABOUT SECTION
+         Two-column layout: bio text on the left
+         (flex: 2), skills list on the right (flex: 1).
+         This is the flex-grow + flex-basis demo.
+         ═══════════════════════════════════════════ -->
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-layout">
+                    <div class="about-bio">
+                        <p>
+                            I am a UI/UX designer with eight years of experience
+                            designing for web and mobile products. I have worked
+                            with early-stage startups, NGOs, and mid-size
+                            technology companies across Lagos, Nairobi, and
+                            London.
+                        </p>
+                        <p>
+                            My work sits at the intersection of user research,
+                            interaction design, and visual craft. I do not just
+                            make things look good — I make them work well for
+                            the people who use them.
+                        </p>
+                        <p>
+                            Before going freelance in 2020, I was the Lead
+                            Product Designer at Paystack, where I led the
+                            redesign of the merchant dashboard used by over
+                            80,000 businesses.
+                        </p>
+                    </div>
+
+                    <div class="about-skills">
+                        <h3>Core Skills</h3>
+                        <ul class="skills-list">
+                            <li>User Research</li>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>Figma</li>
+                            <li>Design Systems</li>
+                            <li>Usability Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════
+         WORK SECTION — CARD ROW
+         Three project cards in a flex row
+         that wraps on smaller screens.
+         ═══════════════════════════════════════════ -->
+            <section id="work">
+                <h2>Selected Work</h2>
+                <div class="card-row">
+                    <article class="project-card">
+                        <div class="card-tag">Mobile App</div>
+                        <h3>Farmly</h3>
+                        <p>
+                            End-to-end UX redesign of an agri-finance app
+                            connecting Nigerian smallholder farmers to
+                            micro-loans. Reduced onboarding drop-off by 42%.
+                        </p>
+                        <p class="card-role">Role: Lead Designer · 2023</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-tag">Web Platform</div>
+                        <h3>Helios Dashboard</h3>
+                        <p>
+                            Designed a solar energy monitoring dashboard for
+                            facility managers. Prioritised data clarity and
+                            reduced the number of screens needed to complete key
+                            tasks by half.
+                        </p>
+                        <p class="card-role">Role: Solo Designer · 2022</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-tag">Design System</div>
+                        <h3>Kora UI Kit</h3>
+                        <p>
+                            Built a production-ready component library in Figma
+                            for a fintech company with five product teams.
+                            Covers 200+ components with full dark-mode support.
+                        </p>
+                        <p class="card-role">
+                            Role: Design Systems Lead · 2022–2023
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════
+         PROCESS SECTION — SIDEBAR + MAIN
+         Fixed sidebar (flex: 0 0 220px) and a
+         growing main column (flex: 1).
+         This is the flex-shrink + flex-basis demo.
+         ═══════════════════════════════════════════ -->
+            <section id="process">
+                <h2>My Process</h2>
+                <div class="process-layout">
+                    <aside class="process-sidebar">
+                        <h3>Phases</h3>
+                        <ul class="phase-list">
+                            <li class="phase-item active">01 Discovery</li>
+                            <li class="phase-item">02 Define</li>
+                            <li class="phase-item">03 Design</li>
+                            <li class="phase-item">04 Test</li>
+                            <li class="phase-item">05 Deliver</li>
+                        </ul>
+                    </aside>
+
+                    <div class="process-main">
+                        <div class="phase-block">
+                            <h3>Discovery</h3>
+                            <p>
+                                I start every project by understanding the
+                                people who will use the product. This means
+                                stakeholder interviews, user interviews,
+                                competitive analysis, and reviewing any existing
+                                research. I come out of discovery with a clear
+                                picture of user goals, pain points, and the
+                                business constraints I am designing within.
+                            </p>
+                        </div>
+
+                        <div class="phase-block">
+                            <h3>Define</h3>
+                            <p>
+                                I synthesise discovery findings into user
+                                personas, journey maps, and a clear problem
+                                statement. This stage produces the brief that
+                                guides all design decisions. Getting this right
+                                prevents scope creep and keeps teams aligned
+                                throughout the project.
+                            </p>
+                        </div>
+
+                        <div class="phase-block">
+                            <h3>Design</h3>
+                            <p>
+                                I move from low-fidelity wireframes to
+                                high-fidelity prototypes in Figma. I design for
+                                the edge cases first, not last. Every
+                                interaction is documented — not just the happy
+                                path.
+                            </p>
+                        </div>
+
+                        <div class="phase-block">
+                            <h3>Test</h3>
+                            <p>
+                                I run moderated usability sessions with five to
+                                eight participants per round. Sessions are
+                                recorded, transcribed, and turned into a
+                                prioritised list of improvements before anything
+                                is handed to engineering.
+                            </p>
+                        </div>
+
+                        <div class="phase-block">
+                            <h3>Deliver</h3>
+                            <p>
+                                I hand off to developers using annotated Figma
+                                files, a component inventory, and a live design
+                                system where applicable. I stay involved through
+                                the build phase to answer questions and review
+                                implementation quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════
+         TESTIMONIALS — FLEX ROW + WRAP
+         Two testimonials side by side using
+         flex-wrap so they stack on small screens.
+         ═══════════════════════════════════════════ -->
+            <section id="testimonials">
+                <h2>What Clients Say</h2>
+                <div class="testimonial-row">
+                    <article class="testimonial">
+                        <p class="quote">
+                            "Zara brought clarity to a product we had been
+                            struggling to define for months. Her process is
+                            rigorous and her output is beautiful."
+                        </p>
+                        <p class="attribution">— Tunde Osei, CPO at Farmly</p>
+                    </article>
+
+                    <article class="testimonial">
+                        <p class="quote">
+                            "Working with Zara felt like having a co-founder.
+                            She asked the right questions, pushed back when we
+                            were wrong, and delivered beyond what we imagined."
+                        </p>
+                        <p class="attribution">
+                            — Amira Hassan, CEO at Helios Tech
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════
+         CONTACT SECTION
+         Flex row: contact info left, availability
+         callout right.
+         ═══════════════════════════════════════════ -->
+            <section id="contact">
+                <h2>Work With Me</h2>
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <p>
+                            I take on one to two new projects per quarter. If
+                            you have a product challenge that needs a rigorous
+                            design process, I would like to hear about it.
+                        </p>
+                        <ul class="contact-list">
+                            <li>
+                                Email: <strong>zara@zarabello.design</strong>
+                            </li>
+                            <li>
+                                LinkedIn:
+                                <strong>linkedin.com/in/zarabello</strong>
+                            </li>
+                            <li>
+                                Dribbble:
+                                <strong>dribbble.com/zarabello</strong>
+                            </li>
+                            <li>
+                                Location:
+                                <strong
+                                    >Lagos, Nigeria (remote-friendly)</strong
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="availability-card">
+                        <p class="avail-status">Currently Available</p>
+                        <p>
+                            Taking new projects from
+                            <strong>October 2025</strong>. Typical engagement:
+                            6–12 weeks.
+                        </p>
+                        <p class="avail-note">
+                            I work across time zones and have collaborated with
+                            teams in the UK, US, and East Africa.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="main-footer">
+            <div class="footer-inner">
+                <p class="footer-name">Zara Bello</p>
+                <p class="footer-copy">
+                    &copy; 2025 Zara Bello Design. All rights reserved.
+                </p>
+                <p class="footer-location">Lagos, Nigeria</p>
+            </div>
+        </footer>
+    </body>
+</html>
